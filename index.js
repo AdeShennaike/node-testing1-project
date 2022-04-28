@@ -8,8 +8,13 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const objClone = { ...obj }
+  for (let prop in objClone){
+    objClone[prop] = objClone[prop].trim()
+  }
+  return objClone
 }
-
+// console.log()
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
  * @param {object} obj - an object with properties that are strings
